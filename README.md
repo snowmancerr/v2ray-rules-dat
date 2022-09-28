@@ -1,4 +1,4 @@
-# GEODATA
+# GEO ASSETS
 
 Generate custom geosite and geoip based on [Loyalsoldier](https://github.com/Loyalsoldier/v2ray-rules-dat) with addtional list.
 
