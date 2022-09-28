@@ -124,6 +124,9 @@ iflix.com
 v.smtcdns.com
 v.smtcdns.net
 vv.video.qq.com
+wetvdefaultts.tc.qq.com
+apd-vlive.apdcdn.tc.qq.com
+tc.qq.com
 wetv.vip
 wetvinfo.com
 # > LiveTVGO
