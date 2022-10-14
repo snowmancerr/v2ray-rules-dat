@@ -213,9 +213,6 @@ resso
 
 # > Anime
 anoboy.watch
-biliintl.com
-bstarstatic.com
-upos-bstar1-mirrorakam.akamaized.net
 neonime.co
 gomunime.is
 9anime.cz

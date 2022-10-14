@@ -132,11 +132,18 @@ wetvinfo.com
 # > LiveTVGO
 livetvgo.my.id
 livetvgo
-# > BILIBILI COMMICS
+# > BILIBILI
 bilibilicomics.com
 bilibili.com
 hdslb.com
 bstarstatic.com
+biliintl.com
+upos-bstar1-mirrorakam.akamaized.net
+bilivideo.com
+bilibili.tv
+pic-bstarstatic.akamaized.net
+s-bstarstatic.akamaized.net
+upos-hz-mirrorakam.akamaized.net
 # > MARKET PLACE
 tokopedia.com
 shopee.co.id
