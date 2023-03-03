@@ -154,7 +154,6 @@ blibli.com
 orami.co.id
 ralali.com
 bhinneka.com
-jd.id
 zalora.co.id
 tokopedia
 shopee
@@ -189,7 +188,7 @@ shopeepay
 grab
 grabtaxi
 # > LIST Domain tLD Indo & GEOIP INDO
-id
+.id
 co.id
 ac.id
 or.id
