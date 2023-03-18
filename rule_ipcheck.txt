@@ -55,11 +55,9 @@ whoer.net
 ipv6-test.com
 dnsleaktest.com
 pingtools.org
-openspeedtest.com
 taobao.com
 ttt.sh
 skk.moe
 ds.metric.gstatic.com
 v4.metric.gstatic.com
-cachefly.net
 ip.gs
