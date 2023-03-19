@@ -1,10 +1,12 @@
 include:test-ipv6
 include:ipip
+
 domains.google.com
 ipv4.google.com
 ipv6test.google.com
 ds.metric.gstatic.com
 v4.metric.gstatic.com
+
 speedtest6.com
 ipify.org
 ip-api.com
@@ -86,6 +88,10 @@ whatismyip.network
 tracemyip.org
 dnschecker.org
 ipconfig.in
+strongleakstest.com
+dns-leak.com
+dnsleaktest.org
+
 #keyword
 keyword:whatismyip
 keyword:iplocation
@@ -96,3 +102,6 @@ keyword:ipstack
 keyword:ipinfo
 keyword:db-ip
 keyword:geoapi
+keyword:dnsleak
+keyword:dnschecker
+keyword:dns-leak
