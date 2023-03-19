@@ -1,6 +1,7 @@
-include:speedtest
 include:rule-playstore
-my.zerotier.com
+
+full:my.zerotier.com
 zerotier.com
+tuyaus.com
 twilio.com
 twiliocdn.com
