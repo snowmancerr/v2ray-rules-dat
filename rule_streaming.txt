@@ -1,4 +1,3 @@
-include:iqiyi
 include:abema
 include:archiveofourown
 include:attwatchtv
@@ -13,6 +12,7 @@ include:goodreads
 include:hamivideo
 include:hulu
 include:imdb
+include:iqiyi
 include:kingkonglive
 include:kkbox
 include:mytvsuper
@@ -27,7 +27,6 @@ include:soundcloud
 include:spotify
 include:subscene
 include:tidal
-include:tiktok
 include:tmdb
 include:tvdb
 include:tver
