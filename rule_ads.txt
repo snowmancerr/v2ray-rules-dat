@@ -31,7 +31,6 @@ keyword:pagead2
 keyword:afs
 keyword:adservice
 keyword:mediavisor
-keyword:ads
 keyword:adc
 keyword:adservetx
 keyword:click
