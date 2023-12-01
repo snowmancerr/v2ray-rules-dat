@@ -35,7 +35,7 @@ sbiindo.com
 megasyariah.co.id
 bankindex.co.id
 bankmayora.com
-ccb.com
+idn.ccb.com
 dbs.com
 perdania.co.id
 mizuhocbk.co.id
@@ -56,8 +56,7 @@ bcadigital.co.id
 nobubank.com
 bankina.co.id
 paninbanksyariah.co.id
-primamasterbank.co.id
-syariahbukopin.co.id
+wsyariahbukopin.co.id
 banksampoerna.com
 bankdinar.co.id
 amarbank.co.id
