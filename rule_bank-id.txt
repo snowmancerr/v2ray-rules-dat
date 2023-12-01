@@ -103,3 +103,6 @@ mufg.co.id
 standardchartered.com
 deutsche-bank.co.id
 bankofchina.co.id
+# Addtional
+linebank.co.id
+seabank.co.id
