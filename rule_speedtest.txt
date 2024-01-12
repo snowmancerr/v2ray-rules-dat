@@ -12,6 +12,7 @@ wifiman.com
 wifiman.me
 uwn.com
 bandwidthplace.com
+real-debrid.com
 keyword:speedtest
 keyword:speedtestcustom
 keyword:openspeedtest
