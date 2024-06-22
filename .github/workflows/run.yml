@@ -45,19 +45,20 @@ jobs:
           echo "OISD_NSFW=https://nsfw.oisd.nl/dnsmasq" >> $GITHUB_ENV
           echo "DOH_DNS=https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/master/doh-domains.txt" >> $GITHUB_ENV
           echo "RULE_ADS=https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt" >> $GITHUB_ENV
-          echo "RULE_ADS_EXTENDED=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_ads.txt" >> $GITHUB_ENV
-          echo "RULE_GAME=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_gaming.txt" >> $GITHUB_ENV
-          echo "RULE_INDO=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_indo.txt" >> $GITHUB_ENV
-          echo "RULE_PS=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_playstore.txt" >> $GITHUB_ENV
-          echo "RULE_SOSMED=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_sosmed.txt" >> $GITHUB_ENV
-          echo "RULE_STREAMING=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_streaming.txt" >> $GITHUB_ENV
-          echo "RULE_UMUM=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_umum.txt" >> $GITHUB_ENV
-          echo "RULE_IPCHECK=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_ipcheck.txt" >> $GITHUB_ENV
-          echo "RULE_VIDCONFERENCE=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule-videoconference.txt" >> $GITHUB_ENV
-          echo "URLTEST=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/urltest.txt" >> $GITHUB_ENV
-          echo "RULE_SPEEDTEST=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_speedtest.txt" >> $GITHUB_ENV
+          echo "RULE_ADS_EXTENDED=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_ads.txt" >> $GITHUB_ENV
+          echo "RULE_GAME=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_gaming.txt" >> $GITHUB_ENV
+          echo "RULE_INDO=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_indo.txt" >> $GITHUB_ENV
+          echo "RULE_PS=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_playstore.txt" >> $GITHUB_ENV
+          echo "RULE_SOSMED=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_sosmed.txt" >> $GITHUB_ENV
+          echo "RULE_STREAMING=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_streaming.txt" >> $GITHUB_ENV
+          echo "RULE_UMUM=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_umum.txt" >> $GITHUB_ENV
+          echo "RULE_IPCHECK=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_ipcheck.txt" >> $GITHUB_ENV
+          echo "RULE_VIDCONFERENCE=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule-videoconference.txt" >> $GITHUB_ENV
+          echo "URLTEST=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/urltest.txt" >> $GITHUB_ENV
+          echo "RULE_SPEEDTEST=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_speedtest.txt" >> $GITHUB_ENV
           echo "MALICIOUS_HOST=https://raw.githubusercontent.com/elliotwutingfeng/Inversion-DNSBL-Blocklists/main/Google_hostnames_light.txt" >> $GITHUB_ENV
-          echo "RULE_BANK_ID=https://raw.githubusercontent.com/malikshi/v2ray-rules-dat/rule/rule_bank-id.txt" >> $GITHUB_ENV
+          echo "RULE_BANK_ID=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_bank-id.txt" >> $GITHUB_ENV
+          echo "RULE_ECOMMERCE=https://raw.githubusercontent.com/snowmancerr/v2ray-rules-dat/rule/rule_ecommerce.txt" >> $GITHUB_ENV
         shell: bash
 
       - name: Checkout the "hidden" branch of this repo
@@ -215,6 +216,8 @@ jobs:
           wget -O rule-sosmed.txt $RULE_SOSMED
           wget -O ./community/data/rule-streaming $RULE_STREAMING
           wget -O rule-streaming.txt $RULE_STREAMING
+          wget -O ./community/data/rule-speedtest $RULE_SPEEDTEST
+          wget -O rule-speedtest.txt $RULE_SPEEDTEST
           wget -O ./community/data/rule-umum $RULE_UMUM
           wget -O rule-umum.txt $RULE_UMUM
           wget -O ./community/data/rule-ipcheck $RULE_IPCHECK
@@ -223,12 +226,12 @@ jobs:
           wget -O videoconference.txt $RULE_VIDCONFERENCE
           wget -O ./community/data/urltest $URLTEST
           wget -O urltest.txt $URLTEST
-          wget -O ./community/data/rule-speedtest $RULE_SPEEDTEST
-          wget -O rule-speedtest.txt $RULE_SPEEDTEST
           wget -O ./community/data/rule-malicious $MALICIOUS_HOST
           wget -O rule-malicious.txt $MALICIOUS_HOST
           wget -O ./community/data/bank-id $RULE_BANK_ID
           wget -O bank-id.txt $RULE_BANK_ID
+          wget -O ./community/data/ecommerce-id $RULE_ECOMMERCE
+          wget -O ecommerce-id.txt $RULE_ECOMMERCE
 
       - name: Filter and save d3ward.txt
         run: |
@@ -256,26 +259,28 @@ jobs:
 
       - name: Move and zip files and generate sha256 hash
         run: |
-          install -Dp ./geoip.dat ./publish/geoip.dat
-          install -Dp ./geoip.dat.sha256sum ./publish/geoip.dat.sha256sum
-          install -Dp ./custom/publish/geosite.dat ./publish/geosite.dat
+          install -Dp ./geoip.dat ./publish/GeoIP.dat
+          install -Dp ./geoip.dat.sha256sum ./publish/GeoIP.dat.sha256sum
+          install -Dp ./custom/publish/geosite.dat ./publish/GeoSite.dat
           install -p {proxy,direct,reject}-tld-list.txt ./publish/
           install -p {proxy,direct,reject}-list.txt ./publish/
           install -p {china-list,apple-cn,google-cn,gfw,greatfire,win-spy,win-update,win-extra}.txt ./publish/
           cd ./publish || exit 1
-          sha256sum geosite.dat > geosite.dat.sha256sum
+          zip Geo-files.zip GeoIP.dat GeoSite.dat
+          sha256sum GeoSite.dat > GeoSite.dat.sha256sum
+          sha256sum Geo-files.zip > Geo-files.zip.sha256sum
 
       - name: Convert to Sing-Box geoassets
         run: |
           wget https://github.com/malikshi/Notes/releases/download/v2box/v2box
           chmod +x v2box
-          ./v2box migrate geoip -i ./publish/geoip.dat -o geoip.db
-          ./v2box migrate geosite -i ./publish/geosite.dat -o geosite.db
-          mv -f geoip.db ./publish/
-          mv -f geosite.db ./publish/
+          ./v2box migrate geoip -i ./publish/GeoIP.dat -o GeoIP.db
+          ./v2box migrate geosite -i ./publish/GeoSite.dat -o GeoSite.db
+          mv -f GeoIP.db ./publish/
+          mv -f GeoSite.db ./publish/
           cd ./publish || exit 1
-          sha256sum geosite.db > geosite.db.sha256sum
-          sha256sum geoip.db > geoip.db.sha256sum
+          sha256sum GeoSite.db > GeoSite.db.sha256sum
+          sha256sum GeoIP.db > GeoIP.db.sha256sum
 
       - name: Release and upload assets
         uses: svenstaro/upload-release-action@v2
@@ -308,20 +313,7 @@ jobs:
       - name: Delete Old Release
         uses: dev-drprasad/delete-older-releases@v0.2.1
         with:
-          repo: malikshi/v2ray-rules-dat
+          repo: snowmancerr/v2ray-rules-dat
           keep_latest: 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Trigger Synch sing-box-geo
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GHA_WORKFLOW_TRIGGER }}
-          script: |
-            const result = await github.rest.actions.createWorkflowDispatch({
-              owner: 'malikshi',
-              repo: 'sing-box-geo',
-              workflow_id: 'release.yaml',
-              ref: 'master'
-            })
-            console.log(result)
