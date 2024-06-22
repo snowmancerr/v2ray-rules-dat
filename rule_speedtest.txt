@@ -5,6 +5,7 @@ speed.dler.io
 openspeedtest.com
 cachefly.net
 broadbandspeedchecker.co.uk
+librespeed.org
 loadingtest.com
 testmy.net
 proof.ovh.net
@@ -12,7 +13,6 @@ wifiman.com
 wifiman.me
 uwn.com
 bandwidthplace.com
-real-debrid.com
 keyword:speedtest
 keyword:speedtestcustom
 keyword:openspeedtest
