@@ -1,5 +1,4 @@
 include:line
-include:meta
 include:tiktok
 include:twitter
 include:telegram
@@ -9,6 +8,16 @@ include:pinterest
 include:linkedin
 include:flickr
 include:douyu
+
+# > Meta but not include WhatsApp
+include:facebook
+include:facebook-dev
+include:instagram
+include:messenger
+include:oculus
+include:threads
+meta.ai
+meta.com
 
 # > Badoo
 badoo.app
