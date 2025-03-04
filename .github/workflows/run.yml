@@ -260,9 +260,6 @@ jobs:
           install -Dp ./geoip.dat ./publish/GeoIP.dat
           install -Dp ./geoip.dat.sha256sum ./publish/GeoIP.dat.sha256sum
           install -Dp ./custom/publish/geosite.dat ./publish/GeoSite.dat
-          install -p {proxy,direct,reject}-tld-list.txt ./publish/
-          install -p {proxy,direct,reject}-list.txt ./publish/
-          install -p {china-list,apple-cn,google-cn,gfw,greatfire,win-spy,win-update,win-extra}.txt ./publish/
           cd ./publish || exit 1
           zip Geo-files.zip GeoIP.dat GeoSite.dat
           sha256sum GeoSite.dat > GeoSite.dat.sha256sum
