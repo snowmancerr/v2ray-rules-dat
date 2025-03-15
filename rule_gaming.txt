@@ -1,6 +1,7 @@
 include:category-games
 include:discord
 include:netease
+include:nvidia
 
 # Mobile Legends
 mobilelegends.com
@@ -49,6 +50,10 @@ playark.com
 
 # > BigFishGames
 bigfishgames.com
+
+# > Biligame
+biligame.net
+bilibiligame.net
 
 # > CoD
 callofduty.com
@@ -179,6 +184,13 @@ full:supercell.helpshift.com
 # > Take2Games
 take2games.com
 
+# > TapTap
+tap.io
+taptap.io
+tapapis.cn
+tapapis.com
+keyword:tapapis
+
 # > Unity3d
 unity3d.com
 
@@ -186,6 +198,12 @@ unity3d.com
 wargaming.com
 wargaming.net
 worldoftanks.com
+
+# > XD
+xd.com
+t3.xd.com
+xindong.com
+keyword:matchserver
 
 # > X.D. Global
 xdg.com
@@ -220,8 +238,11 @@ keyword:devmgapex
 
 # > Konami
 konami.net
+konamionline.com
+konami-efootball.com
 applilink.jp
 keyword:konami
+keyword:efootball
 
 # > Growtopia
 growtopia1.com
@@ -305,3 +326,17 @@ aethergazer.com
 # > Wuthering Waves (com.kurogame.wutheringwaves.global)
 full:wutheringwaves.kurogames.com
 aki-game.net
+
+# > Dragon Nest: Rebirth of Legend (com.lulingame.dncbt.gp)
+latale.tw
+lulingame.com
+titan-game.com
+full:report.3975ad.com
+keyword:lulingame
+
+# > Dragon Nest World (com.shengqugames.wod.bilibili)
+ovscdns.com
+sdo.com
+sdoprofile.com
+zjshulong.com
+full:au.rwt.hjy1314.com
