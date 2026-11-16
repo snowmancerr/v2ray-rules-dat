@@ -1,4 +1,5 @@
 name: Build V2Ray rules dat files
+
 on:
   workflow_dispatch:
   schedule:
@@ -9,16 +10,22 @@ on:
     paths-ignore:
       - "**/README.md"
 
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Go 1.x.y
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v6
         with:
           go-version: '1.20'
           check-latest: true
-      
+
       - name: Set variables
         run: |
           echo "RELEASE_NAME=Released on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
@@ -58,30 +65,30 @@ jobs:
         shell: bash
 
       - name: Checkout the "hidden" branch of this repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: hidden
 
       - name: Checkout Loyalsoldier/domain-list-custom
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: Loyalsoldier/domain-list-custom
           path: custom
 
       - name: Checkout v2fly/domain-list-community
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: v2fly/domain-list-community
           path: community
 
       - name: Checkout cokebar/gfwlist2dnsmasq
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: cokebar/gfwlist2dnsmasq
           path: gfwlist2dnsmasq
 
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version-file: ./custom/go.mod
           cache-dependency-path: ./custom/go.sum
@@ -308,7 +315,7 @@ jobs:
       - name: Delete Old Release
         uses: dev-drprasad/delete-older-releases@v0.2.1
         with:
-          repo: snowmancerr/v2ray-rules-dat
+          repo: ${{ github.repository }}
           keep_latest: 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
